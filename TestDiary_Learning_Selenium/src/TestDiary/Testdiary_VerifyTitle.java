@@ -1,3 +1,4 @@
+package TestDiary;
 //Import Selenium webdriver and firefox driver
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
