@@ -1,4 +1,4 @@
-package TestDiary;
+package testDiary;
 
 import java.util.concurrent.TimeUnit;
 
