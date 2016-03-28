@@ -3,9 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Users/Owner/Downloads/selenium-server-standalone-2.49.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Owner/Desktop/Selenium Auto/Jars/selenium-2.49.1/selenium-java-2.49.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Owner/Desktop/Selenium Auto/Jars/selenium-2.49.1/selenium-java-2.49.1-srcs.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Owner/Desktop/Jmeter/easymock-3.4/easymock-3.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Owner/Desktop/Jmeter/easymock-3.4/easymock-3.4-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Owner/Desktop/Jmeter/easymock-3.4/easymock-3.4-samples.jar"/>
@@ -13,5 +10,8 @@
 	<classpathentry kind="lib" path="C:/Users/Owner/Desktop/Jmeter/easymock-3.4/easymock-3.4-tests.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Owner/Desktop/Jmeter/easymock-3.4/original-easymock-3.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Owner/Desktop/Jmeter/easymock-3.4/original-easymock-3.4-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Owner/Desktop/Selenium Auto/Jars/selenium -2.52.0/selenium-server-standalone-2.53.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Owner/Desktop/Selenium Auto/Jars/selenium -2.52.0/selenium-2.53.0/selenium-java-2.53.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Owner/Desktop/Selenium Auto/Jars/selenium -2.52.0/selenium-2.53.0/selenium-java-2.53.0-srcs.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

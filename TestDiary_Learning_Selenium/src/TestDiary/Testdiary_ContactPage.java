@@ -10,9 +10,11 @@ public class Testdiary_ContactPage {
 
 		// Open a new firefox browser
 		WebDriver driver = new FirefoxDriver();
+		
+		driver.manage().window().maximize();
 
 		// Initialise the variable to store the URL
-		String contactUrl = "http://www.testdiary.com/contact/";
+		String contactUrl = "http://www.testdiary.com/training/selenium/selenium-test-page/";
 
 		// Navigate to the URL
 		driver.get(contactUrl);
@@ -73,7 +75,7 @@ public class Testdiary_ContactPage {
 		 * locator to let Selenium get the text
 		 * from the Webelement you have located
 		 */
-		String actual_message = driver.findElement(By.xpath("//div[@id='wpcf7-f548-p96-o1']/form/div[2]")).getText();
+		String actual_message = driver.findElement(By.xpath("//div[@id='wpcf7-f551-p683-o1']/form/div[2]")).getText();
 
 		// Declare and initialise the variable to store the expected success message of the web page.
 		String expected_message = "Your message was sent successfully. Thanks.";
