@@ -19,11 +19,12 @@ public class Testdiary_ExplicitAndImplicitWait {
 		String contactUrl = "http://www.testdiary.com/training/selenium/selenium-test-page/";
 
 		driver.get(contactUrl);
+		
 
-		// wait 10 seconds until presence of element is located
-		(new WebDriverWait(driver, 10)).until(ExpectedConditions
-				.presenceOfElementLocated(By.name("your-name")));
+		// *Tells WebDriver to wait for 10 seconds if targeted element is not found
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
+		
 		WebElement name = driver.findElement(By.name("your-name"));
 
 		name.clear();
@@ -49,14 +50,21 @@ public class Testdiary_ExplicitAndImplicitWait {
 
 		send.click();
 
-		// *Tells WebDriver to wait for 7 seconds
-		driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
+		String expected_message = "Your message was sent successfully. Thanks.";		
+		
+		
+		
+		// wait 10 seconds until text is located in the element located
+		(new WebDriverWait(driver, 10))
+				.until(ExpectedConditions.textToBePresentInElementLocated(
+						By.xpath("//div[@id='wpcf7-f551-p683-o1']/form/div[2]"),
+						expected_message));
 
+		
+		
 		String actual_message = driver.findElement(
 				By.xpath("//div[@id='wpcf7-f551-p683-o1']/form/div[2]"))
 				.getText();
-
-		String expected_message = "Your message was sent successfully. Thanks.";
 
 		if (expected_message.equals(actual_message)) {
 
