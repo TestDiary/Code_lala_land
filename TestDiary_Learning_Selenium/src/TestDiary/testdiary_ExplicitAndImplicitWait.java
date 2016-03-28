@@ -20,12 +20,9 @@ public class testdiary_ExplicitAndImplicitWait {
 
 		driver.get(contactUrl);
 
-		 
 		// wait 10 seconds until presence of element is located
 		(new WebDriverWait(driver, 10)).until(ExpectedConditions
 				.presenceOfElementLocated(By.name("your-name")));
-
-		
 
 		WebElement name = driver.findElement(By.name("your-name"));
 
@@ -52,10 +49,8 @@ public class testdiary_ExplicitAndImplicitWait {
 
 		send.click();
 
-		
 		// *Tells WebDriver to wait for 7 seconds
 		driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
-		
 
 		String actual_message = driver.findElement(
 				By.xpath("//div[@id='wpcf7-f551-p683-o1']/form/div[2]"))
@@ -74,5 +69,4 @@ public class testdiary_ExplicitAndImplicitWait {
 
 		System.exit(0);
 	}
-
 }
