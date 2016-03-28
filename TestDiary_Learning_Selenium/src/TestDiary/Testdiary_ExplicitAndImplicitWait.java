@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class testdiary_ExplicitAndImplicitWait {
+public class Testdiary_ExplicitAndImplicitWait {
 	public static void main(String[] args) throws InterruptedException {
 
 		WebDriver driver = new FirefoxDriver();
