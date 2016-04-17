@@ -1,7 +1,6 @@
 package testDiary;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -58,7 +57,7 @@ public class Testdiary_VisibleConditions {
 			System.out.println("Rest Api checkbox was selected on default");
 		}
 
-		// Check that Save button is displayed on the WebPage
+		// Check if Save button is displayed on the WebPage
 		WebElement saveButton = driver.findElement(By.id("demo"));
 
 		Boolean checkSaveIsDisplayed = saveButton.isDisplayed();
@@ -67,7 +66,7 @@ public class Testdiary_VisibleConditions {
 			System.out.println("save button is displayed");
 		}
 
-		// Check that Save button is not enabled on the WebPage
+		// Check if Save button is not enabled on the WebPage
 
 		Boolean checkSaveIsEnabled = saveButton.isEnabled();
 
