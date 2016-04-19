@@ -1,6 +1,5 @@
 package testDiary;
 
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,7 +19,8 @@ public class Testdiary_VisibleConditions {
 
 		driver.get(contactUrl);
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		(new WebDriverWait(driver, 10))
+		.until(ExpectedConditions.visibilityOfElementLocated(By.id("seleniumbox")));
 
 		// Declaring a local variable of type "WebElement" to initialize the
 		// value of the webElement (seleniumCheckbox) and webElement

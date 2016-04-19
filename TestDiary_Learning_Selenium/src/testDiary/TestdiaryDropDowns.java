@@ -1,6 +1,5 @@
 package testDiary;
 
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,8 +21,8 @@ public class TestdiaryDropDowns {
 
 		driver.get(contactUrl);
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+		(new WebDriverWait(driver, 10))
+		.until(ExpectedConditions.visibilityOfElementLocated(By.id("Shirts")));
 		
 		
 		// Select from the drop down by visible text
