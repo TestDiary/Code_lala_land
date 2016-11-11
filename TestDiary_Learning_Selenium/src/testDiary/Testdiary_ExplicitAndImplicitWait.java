@@ -1,79 +1,77 @@
 package testDiary;
 
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import java.util.concurrent.TimeUnit;
 
 public class Testdiary_ExplicitAndImplicitWait {
-	public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
-		WebDriver driver = new FirefoxDriver();
+        WebDriver driver = new FirefoxDriver();
 
-		driver.manage().window().maximize();
+        driver.manage().window().maximize();
 
-		String contactUrl = "http://www.testdiary.com/training/selenium/selenium-test-page/";
+        String contactUrl = "http://www.testdiary.com/training/selenium/selenium-test-page/";
 
-		driver.get(contactUrl);
-		
+        driver.get(contactUrl);
 
-		// *Tells WebDriver to wait for 10 seconds if targeted element is not found
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		
-		WebElement name = driver.findElement(By.name("your-name"));
+        // *Tells WebDriver to wait for 10 seconds if targeted element is not found
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		name.clear();
 
-		name.sendKeys("Femi");
+        WebElement name = driver.findElement(By.name("your-name"));
 
-		WebElement email = driver.findElement(By.name("your-email"));
+        name.clear();
 
-		email.clear();
+        name.sendKeys("Femi");
 
-		email.sendKeys("xxxx@testdiary.com");
+        WebElement email = driver.findElement(By.name("your-email"));
 
-		WebElement subject = driver.findElement(By.name("your-subject"));
-		subject.clear();
-		subject.sendKeys("New tester");
+        email.clear();
 
-		WebElement your_message = driver.findElement(By.name("your-message"));
-		your_message.clear();
-		your_message.sendKeys("I want to be the best tester.");
+        email.sendKeys("xxxx@testdiary.com");
 
-		WebElement send = driver
-				.findElement(By.xpath("//input[@value='Send']"));
+        WebElement subject = driver.findElement(By.name("your-subject"));
+        subject.clear();
+        subject.sendKeys("New tester");
 
-		send.click();
+        WebElement your_message = driver.findElement(By.name("your-message"));
+        your_message.clear();
+        your_message.sendKeys("I want to be the best tester.");
 
-		String expected_message = "Your message was sent successfully. Thanks.";		
-		
-		
-		
-		// wait 10 seconds until text is located in the element located
-		(new WebDriverWait(driver, 10))
-				.until(ExpectedConditions.textToBePresentInElementLocated(
-						By.xpath("//div[@id='wpcf7-f551-p683-o1']/form/div[2]"),
-						expected_message));
+        WebElement send = driver
+                .findElement(By.xpath("//input[@value='Send']"));
 
-		
-		
-		String actual_message = driver.findElement(
-				By.xpath("//div[@id='wpcf7-f551-p683-o1']/form/div[2]"))
-				.getText();
+        send.click();
 
-		if (expected_message.equals(actual_message)) {
+        String expected_message = "Your message was sent successfully. Thanks.";
 
-			System.out.println("verification successful - " + actual_message);
-		} else {
-			System.out.println("verification unsuccessful");
-		}
 
-		driver.close();
+        // wait 10 seconds until text is located in the element located
+        (new WebDriverWait(driver, 10))
+                .until(ExpectedConditions.textToBePresentInElementLocated(
+                        By.xpath("//div[@id='wpcf7-f551-p683-o1']/form/div[2]"),
+                        expected_message));
 
-		System.exit(0);
-	}
+
+        String actual_message = driver.findElement(
+                By.xpath("//div[@id='wpcf7-f551-p683-o1']/form/div[2]"))
+                .getText();
+
+        if (expected_message.equals(actual_message)) {
+
+            System.out.println("verification successful - " + actual_message);
+        } else {
+            System.out.println("verification unsuccessful");
+        }
+
+        driver.close();
+
+        System.exit(0);
+    }
 }

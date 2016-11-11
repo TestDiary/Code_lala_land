@@ -7,9 +7,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by oadeolusile on 06/11/2016.
- */
 public class TestdiaryFrames {
     public static void main(String[] args) {
 
