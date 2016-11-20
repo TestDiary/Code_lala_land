@@ -44,6 +44,9 @@ public class TestdiaryPageScroll {
         // parse the X and Y coordinates from the above into the execute Script method with the following String
         jsexecutor.executeScript("window.scrollBy(" + hyperlinkXCoordinate + "," + hyperlinkYCoordinate + ")", "");
 
+        // wait until element 'linkText("Open page in the same window")' is clickable
+        (new WebDriverWait(driver, 100)).until(ExpectedConditions.elementToBeClickable(By.linkText("Open page in the same window")));
+
 
         // click on the link
         driver.findElement(By.linkText("Open page in the same window")).click();
